@@ -12,8 +12,8 @@ if(isset($_SESSION['logged']))
 {
     if(isset($_POST['url']) && isset($_POST['cible']))
     {
-        $url = $_POST['url'];
-        $cible = $_POST['cible'];
+        $url = trim($_POST['url']);
+        $cible = trim($_POST['cible']);
         
         if(filter_var($cible,FILTER_VALIDATE_URL) && filter_var($url,FILTER_VALIDATE_URL))
         {
